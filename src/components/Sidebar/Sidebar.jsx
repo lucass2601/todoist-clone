@@ -1,21 +1,6 @@
-import { useLocation } from "react-router"
 import SidebarMenuItem from "./SidebarMenuItem"
 
 function Sidebar({ isOpen, toggleSidebar }) {
-    const location = useLocation();
-
-    console.log(location);
-
-
-    const getCurrentPath = () => {
-        const { pathname } = location
-
-        console.log(pathname.split("/"));
-
-    }
-
-    getCurrentPath()
-
     return (
         <div
             className={`p-2 fixed left-0 top-0 bg-secondary-light h-full transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"
